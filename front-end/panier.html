@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="Consultez votre panier E.M.A Restaurant, modifiez vos quantités et préparez votre commande en ligne.">
+
+    <title>Mon panier | E.M.A Restaurant</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/panier.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         EN-TÊTE
+    ========================== -->
+
+    <header class="site-header">
+        <div class="container header-container">
+
+            <a href="index.html" class="logo" aria-label="Accueil E.M.A Restaurant">
+                <span class="logo-symbol">E.M.A</span>
+                <span class="logo-text">RESTAURANT</span>
+            </a>
+
+            <button type="button" class="menu-toggle" id="menu-toggle" aria-label="Ouvrir le menu" aria-expanded="false"
+                aria-controls="navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="navigation" id="navigation">
+                <a href="index.html">Accueil</a>
+                <a href="menu.html">Notre menu</a>
+                <a href="a-propos.html">À propos</a>
+                <a href="contact.html">Contact</a>
+
+                <a href="panier.html" class="nav-cart active" aria-current="page">
+                    Panier
+                    <span id="cart-count" class="cart-count">0</span>
+                </a>
+            </nav>
+
+        </div>
+    </header>
+
+
+    <!-- =========================
+         BANNIÈRE DU PANIER
+    ========================== -->
+
+    <main>
+
+        <section class="cart-hero">
+            <div class="container">
+
+                <p class="eyebrow">VOTRE SÉLECTION</p>
+
+                <h1>Mon panier</h1>
+
+                <p>
+                    Retrouvez vos plats préférés et préparez votre commande
+                    en quelques instants.
+                </p>
+
+                <div class="cart-breadcrumb">
+                    <a href="index.html">Accueil</a>
+                    <span> / </span>
+                    <a href="menu.html">Menu</a>
+                    <span> / </span>
+                    <span>Panier</span>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- =========================
+             CONTENU DU PANIER
+        ========================== -->
+
+        <section class="cart-section">
+            <div class="container">
+
+                <div class="cart-layout">
+
+                    <!-- Liste des articles -->
+
+                    <div class="cart-main">
+
+                        <div class="cart-heading">
+                            <div>
+                                <p class="section-label">VOTRE COMMANDE</p>
+                                <h2>Vos articles</h2>
+                            </div>
+
+                            <a href="menu.html" class="continue-shopping">
+                                + Ajouter d'autres plats
+                            </a>
+                        </div>
+
+
+                        <!-- Le JavaScript insérera les articles ici -->
+
+                        <div id="cart-items" class="cart-items">
+
+                            <div class="cart-loading">
+                                Chargement de votre panier...
+                            </div>
+
+                        </div>
+
+
+                        <!-- Panier vide -->
+
+                        <div id="empty-cart" class="empty-cart" hidden>
+
+                            <div class="empty-cart-icon">🛒</div>
+
+                            <h2>Votre panier est vide</h2>
+
+                            <p>
+                                Découvrez notre menu et choisissez les plats
+                                qui vous feront plaisir.
+                            </p>
+
+                            <a href="menu.html" class="btn-primary">
+                                Découvrir le menu
+                            </a>
+
+                        </div>
+
+
+                        <div class="cart-footer-actions">
+                            <a href="menu.html" class="back-to-menu">
+                                ← Continuer mes achats
+                            </a>
+
+                            <button type="button" id="clear-cart" class="clear-cart-btn">
+                                Vider le panier
+                            </button>
+                        </div>
+
+                    </div>
+
+
+                    <!-- Résumé de la commande -->
+
+                    <aside class="cart-summary">
+
+                        <div class="summary-header">
+                            <p class="section-label">RÉCAPITULATIF</p>
+                            <h2>Résumé de la commande</h2>
+                        </div>
+
+
+                        <div class="summary-line">
+                            <span>Nombre d'articles</span>
+                            <strong id="summary-quantity">0</strong>
+                        </div>
+
+                        <div class="summary-line">
+                            <span>Sous-total</span>
+                            <strong id="cart-subtotal">0 FCFA</strong>
+                        </div>
+
+                        <div class="summary-line delivery-line">
+                            <span>Livraison</span>
+                            <strong id="delivery-fee">1 000 FCFA</strong>
+                        </div>
+
+                        <p class="delivery-note">
+                            Les frais définitifs seront confirmés selon
+                            votre adresse de livraison.
+                        </p>
+
+
+                        <div class="summary-divider"></div>
+
+
+                        <div class="summary-total">
+                            <span>Total estimé</span>
+                            <strong id="cart-total">0 FCFA</strong>
+                        </div>
+
+                        <p class="tax-note">
+                            Montant affiché en francs CFA (FCFA).
+                        </p>
+
+
+                        <button type="button" id="checkout-button" class="checkout-btn" disabled>
+                            Passer la commande
+                            <span aria-hidden="true">→</span>
+                        </button>
+
+
+                        <div class="secure-order">
+                            <span class="secure-icon">✓</span>
+
+                            <div>
+                                <strong>Commande simplifiée</strong>
+                                <p>
+                                    Vous pourrez renseigner vos coordonnées
+                                    à l'étape suivante.
+                                </p>
+                            </div>
+                        </div>
+
+
+                        <div class="payment-information">
+                            <h3>Paiement</h3>
+
+                            <p>
+                                Les moyens de paiement disponibles seront
+                                présentés lors de la validation de la commande.
+                            </p>
+                        </div>
+
+                    </aside>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- =========================
+             RÉASSURANCE
+        ========================== -->
+
+        <section class="cart-benefits">
+            <div class="container benefits-grid">
+
+                <div class="benefit-item">
+                    <span class="benefit-icon">🍲</span>
+                    <div>
+                        <h3>Des plats savoureux</h3>
+                        <p>Une cuisine préparée avec soin.</p>
+                    </div>
+                </div>
+
+                <div class="benefit-item">
+                    <span class="benefit-icon">🛵</span>
+                    <div>
+                        <h3>Livraison</h3>
+                        <p>Les modalités sont confirmées à la commande.</p>
+                    </div>
+                </div>
+
+                <div class="benefit-item">
+                    <span class="benefit-icon">🤎</span>
+                    <div>
+                        <h3>Service E.M.A</h3>
+                        <p>Nous sommes à votre écoute.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         PIED DE PAGE
+    ========================== -->
+
+    <footer class="site-footer">
+        <div class="container footer-container">
+
+            <div class="footer-brand">
+                <a href="index.html" class="logo footer-logo">
+                    <span class="logo-symbol">E.M.A</span>
+                    <span class="logo-text">RESTAURANT</span>
+                </a>
+
+                <p>
+                    La passion de la cuisine, le plaisir de partager.
+                </p>
+            </div>
+
+            <div class="footer-links">
+                <a href="menu.html">Notre menu</a>
+                <a href="contact.html">Nous contacter</a>
+                <a href="conditions.html">Conditions générales</a>
+                <a href="confidentialite.html">Confidentialité</a>
+            </div>
+
+            <div class="footer-bottom">
+                <p>
+                    © <span id="current-year"></span>
+                    E.M.A Restaurant. Tous droits réservés.
+                </p>
+            </div>
+
+        </div>
+    </footer>
+
+
+    <!-- Charger les scripts dans cet ordre -->
+
+    <script src="js/main.js"></script>
+    <script src="js/cart.js"></script>
+
+</body>
+
+</html>

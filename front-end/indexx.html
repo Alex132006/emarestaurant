@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="E.M.A — Maison Gastronomique. Une expérience culinaire d'exception à Brazzaville.">
+  <meta name="theme-color" content="#0a0908">
+  <title>E.M.A — Maison Gastronomique</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+
+  <div class="preloader" id="preloader">
+    <div class="preloader-mark">E.M.A</div>
+    <div class="preloader-line"><span></span></div>
+    <small>MAISON GASTRONOMIQUE</small>
+  </div>
+
+  <header class="header" id="header">
+    <button class="menu-trigger" id="menuTrigger" aria-label="Ouvrir le menu">
+      <span></span><span></span>
+    </button>
+
+    <a href="#hero" class="luxury-logo">
+      <span class="logo-main">E.M.A</span>
+      <span class="logo-sub">MAISON GASTRONOMIQUE</span>
+    </a>
+
+    <div class="header-right">
+      <button class="header-link search-trigger" id="searchTrigger">RECHERCHER</button>
+      <button class="header-cart" id="cartTrigger">
+        PANIER <span id="cartBadge">0</span>
+      </button>
+    </div>
+  </header>
+
+  <div class="full-menu" id="fullMenu">
+    <div class="menu-panel">
+      <div class="menu-panel-left">
+        <span class="eyebrow">E.M.A</span>
+        <h2>Une maison.<br><i>Un caractère.</i></h2>
+        <p>Cuisine congolaise, grillades et créations contemporaines pensées pour une expérience aussi belle que
+          généreuse.</p>
+      </div>
+      <nav class="menu-panel-nav">
+        <a href="#hero">Accueil <span>01</span></a>
+        <a href="#collection">La collection <span>02</span></a>
+        <a href="#experience">L'expérience <span>03</span></a>
+        <a href="#reservation">Réserver <span>04</span></a>
+        <a href="#contact">Contact <span>05</span></a>
+      </nav>
+    </div>
+  </div>
+
+  <main>
+
+    <section class="hero" id="hero">
+      <div class="hero-image"></div>
+      <div class="hero-vignette"></div>
+      <div class="hero-grain"></div>
+
+      <div class="hero-inner">
+
+        <h1>
+          Le goût<br>
+          <em>devient art.</em>
+        </h1>
+
+        <div class="hero-actions">
+          <a href="#collection" class="lux-btn lux-btn-gold">
+            Découvrir la carte <span>↗</span>
+          </a>
+          <a href="#reservation" class="lux-btn lux-btn-outline">
+            Réserver une table
+          </a>
+        </div>
+
+        <div class="hero-eyebrow">
+          <span></span>
+          BRAZZAVILLE · CONGO
+          <span></span>
+        </div>
+
+
+
+        <div class="hero-scroll">
+          <span class="scroll-line"></span>
+          <span>FAIRE DÉFILER</span>
+        </div>
+      </div>
+
+      <div class="hero-side-note">
+        <span>10H00 — 22H00</span>
+        <span class="dot"></span>
+        <span>7J / 7</span>
+      </div>
+
+      <div class="hero-signature">
+        <span class="mini-label">SIGNATURE E.M.A</span>
+        <strong>Poulet<br>Moambe</strong>
+        <small>≈ 450 g · 3 000 F</small>
+        <button data-product="1">AJOUTER À LA COMMANDE <span>→</span></button>
+      </div>
+    </section>
+
+    <!-- <section class="statement">
+      <span class="eyebrow">L'ART DE RECEVOIR</span>
+      <h2>Parce qu'un repas<br>mérite <i>un souvenir.</i></h2>
+      <div class="statement-line"></div>
+      <p>
+        E.M.A est pensée comme une maison de cuisine, pas comme un simple
+        restaurant. Des produits soigneusement choisis, une exécution constante
+        et un service qui laisse la place à l'essentiel : le plaisir.
+      </p>
+    </section> -->
+
+    <section class="collection" id="collection">
+      <!-- <div class="section-intro">
+        <div>
+          <span class="eyebrow">LA COLLECTION</span>
+          <h2>Les signatures<br><i>de la maison.</i></h2>
+        </div>
+        <p>Une sélection de plats emblématiques. La carte complète est accessible par catégorie et disponible à la
+          commande.</p>
+      </div> -->
+
+      <div class="collection-nav" id="categoryNav">
+        <button class="active" data-cat="all">Tout</button>
+        <button data-cat="congolais">Origines</button>
+        <button data-cat="grillades">Feu</button>
+        <button data-cat="fast">Créations</button>
+        <button data-cat="mer">Océan</button>
+        <button data-cat="desserts">Douceurs</button>
+        <button data-cat="boissons">Boissons</button>
+      </div>
+
+      <div class="lux-grid" id="productGrid"></div>
+
+      <div class="center-action">
+        <button class="outline-dark" id="showAllBtn">Explorer toute la collection <span>↗</span></button>
+      </div>
+    </section>
+
+    <section class="experience" id="experience">
+      <div class="experience-image">
+        <span>02 / 04</span>
+      </div>
+
+      <div class="experience-copy">
+        <span class="eyebrow">L'EXPÉRIENCE E.M.A</span>
+        <h2>Du premier regard<br>au <i>dernier goût.</i></h2>
+        <p>
+          De la réservation à la livraison, chaque étape est pensée avec la même
+          exigence. Une table préparée, une commande précise, une cuisine organisée
+          et un suivi simple depuis votre téléphone.
+        </p>
+
+        <div class="experience-points">
+          <div><span>01</span><strong>Sur place</strong><small>Service soigné</small></div>
+          <div><span>02</span><strong>À emporter</strong><small>Prêt à récupérer</small></div>
+          <div><span>03</span><strong>Livraison</strong><small>Suivi de commande</small></div>
+          <div><span>04</span><strong>Réservation</strong><small>Table confirmée</small></div>
+        </div>
+
+        <a href="#reservation" class="text-arrow">Préparer votre visite <span>→</span></a>
+      </div>
+    </section>
+
+    <section class="service-strip">
+      <div class="service-card">
+        <span>01</span>
+        <h3>Commande<br><i>en ligne</i></h3>
+        <p>Choisissez. Personnalisez. Commandez.</p>
+      </div>
+      <div class="service-card">
+        <span>02</span>
+        <h3>Paiement<br><i>simple</i></h3>
+        <p>Cash · MTN · Airtel · autres moyens.</p>
+      </div>
+      <div class="service-card">
+        <span>03</span>
+        <h3>Suivi<br><i>en direct</i></h3>
+        <p>Reçue · cuisine · prête · livraison.</p>
+      </div>
+      <div class="service-card">
+        <span>04</span>
+        <h3>Fidélité<br><i>exclusive</i></h3>
+        <p>Points, avantages et accès privilégiés.</p>
+      </div>
+    </section>
+
+    <section class="reservation-section" id="reservation">
+      <div class="reservation-content">
+        <span class="eyebrow">LA TABLE E.M.A</span>
+        <h2>Réservez<br>votre <i>moment.</i></h2>
+        <p>
+          Déjeuner, dîner, rendez-vous ou célébration.
+          Nous vous préparons une table à la hauteur de l'occasion.
+        </p>
+
+        <div class="reservation-details">
+          <div><span>ADRESSE</span><strong>Brazzaville, Congo</strong></div>
+          <div><span>HORAIRES</span><strong>10h00 — 22h00</strong></div>
+          <div><span>TÉLÉPHONE</span><strong>+242 06 000 00 00</strong></div>
+        </div>
+      </div>
+
+      <form class="reservation-form" id="reservationForm">
+        <div class="form-title">DEMANDE DE RÉSERVATION</div>
+        <div class="form-row">
+          <label>Nom complet<input name="name" required placeholder="Votre nom"></label>
+          <label>Téléphone<input name="phone" required placeholder="+242"></label>
+        </div>
+        <div class="form-row">
+          <label>Date<input name="date" required type="date"></label>
+          <label>Heure<input name="time" required type="time"></label>
+        </div>
+        <div class="form-row">
+          <label>Personnes
+            <select name="people">
+              <option>2 personnes</option>
+              <option>3 personnes</option>
+              <option>4 personnes</option>
+              <option>6 personnes</option>
+              <option>8 personnes</option>
+              <option>10+ personnes</option>
+            </select>
+          </label>
+          <label>Occasion
+            <select name="occasion">
+              <option>Dîner</option>
+              <option>Déjeuner</option>
+              <option>Anniversaire</option>
+              <option>Professionnel</option>
+              <option>Autre</option>
+            </select>
+          </label>
+        </div>
+        <label class="full-label">Message (optionnel)<textarea name="message"
+            placeholder="Une précision pour notre équipe..."></textarea></label>
+        <button class="lux-submit" type="submit">Envoyer la demande <span>→</span></button>
+        <small id="reservationStatus"></small>
+      </form>
+    </section>
+
+    <section class="journal">
+      <div class="journal-head">
+        <div>
+          <span class="eyebrow">LE JOURNAL E.M.A</span>
+          <h2>À la <i>maison.</i></h2>
+        </div>
+        <span class="edition">ÉDITION 01 · 2026</span>
+      </div>
+      <div class="journal-grid">
+        <article class="journal-card large">
+          <div class="journal-photo photo-one"></div>
+          <span>MAISON</span>
+          <h3>Pourquoi nous<br>cuisinons ainsi.</h3><a href="#">Lire l'histoire →</a>
+        </article>
+        <article class="journal-card">
+          <div class="journal-photo photo-two"></div>
+          <span>SAISON</span>
+          <h3>Les saveurs<br>du moment.</h3><a href="#">Découvrir →</a>
+        </article>
+        <article class="journal-card">
+          <div class="journal-photo photo-three"></div>
+          <span>SIGNATURE</span>
+          <h3>Le geste du<br>Chef.</h3><a href="#">Explorer →</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="final-cta">
+      <div class="final-cta-overlay"></div>
+      <div class="final-cta-content">
+        <span class="eyebrow">E.M.A · BRAZZAVILLE</span>
+        <h2>À table.</h2>
+        <p>Votre expérience commence par une commande.</p>
+        <a href="#collection" class="lux-btn lux-btn-gold">Commander maintenant <span>↗</span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contact">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a class="luxury-logo" href="#hero"><span class="logo-main">E.M.A</span><span class="logo-sub">MAISON
+            GASTRONOMIQUE</span></a>
+        <p>Le goût devient art.</p>
+      </div>
+      <div class="footer-col">
+        <span>EXPLORER</span>
+        <a href="#collection">La collection</a>
+        <a href="#experience">L'expérience</a>
+        <a href="#reservation">Réserver</a>
+      </div>
+      <div class="footer-col">
+        <span>COMMANDER</span>
+        <a href="#collection">Livraison</a>
+        <a href="#collection">À emporter</a>
+        <a href="#collection">Mobile Money</a>
+      </div>
+      <div class="footer-col">
+        <span>MAISON</span>
+        <a href="#">Brazzaville, Congo</a>
+        <a href="#">+242 06 000 00 00</a>
+        <a href="#">10h00 — 22h00</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 E.M.A — Maison Gastronomique</span>
+      <span>Une expérience pensée avec soin.</span>
+    </div>
+  </footer>
+
+  <div class="drawer-backdrop" id="cartBackdrop">
+    <aside class="cart-drawer">
+      <div class="drawer-header">
+        <div><span class="eyebrow">COMMANDE</span>
+          <h2>Votre sélection</h2>
+        </div><button data-close="cartBackdrop">×</button>
+      </div>
+      <div class="cart-list" id="cartList"></div>
+      <div class="empty-cart" id="emptyCart">Votre sélection est vide.</div>
+      <div class="cart-total">
+        <div><span>Sous-total</span><strong id="subtotal">0 F</strong></div>
+        <div><span>Livraison</span><strong id="delivery">0 F</strong></div>
+        <div class="grand"><span>Total</span><strong id="grandTotal">0 F</strong></div>
+        <button class="lux-btn lux-btn-gold full" id="checkoutButton">Finaliser la commande <span>→</span></button>
+      </div>
+    </aside>
+  </div>
+
+  <div class="modal-backdrop" id="productBackdrop">
+    <div class="product-modal">
+      <button class="modal-close" data-close="productBackdrop">×</button>
+      <div class="modal-image" id="modalImage"></div>
+      <div class="modal-copy">
+        <span class="eyebrow" id="modalCategory">SIGNATURE</span>
+        <h2 id="modalName">Produit</h2>
+        <p id="modalDescription"></p>
+        <div class="modal-meta"><strong id="modalPrice">0 F</strong><span id="modalWeight">≈ 450 g</span></div>
+        <label>Quantité<input id="modalQty" type="number" min="1" value="1"></label>
+        <label>Note <input id="modalNote" placeholder="Ex. sans piment"></label>
+        <button class="lux-submit" id="addToCart">Ajouter à la commande <span>→</span></button>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-backdrop" id="checkoutBackdrop">
+    <div class="checkout-modal">
+      <button class="modal-close" data-close="checkoutBackdrop">×</button>
+      <span class="eyebrow">FINALISATION</span>
+      <h2>Votre commande.</h2>
+      <form id="checkoutForm">
+        <div class="form-row">
+          <label>Nom complet<input name="name" required></label>
+          <label>Téléphone<input name="phone" required></label>
+        </div>
+        <div class="form-row">
+          <label>Mode
+            <select name="mode">
+              <option>Livraison</option>
+              <option>À emporter</option>
+              <option>Sur place</option>
+            </select>
+          </label>
+          <label>Paiement
+            <select name="payment">
+              <option>Cash</option>
+              <option>MTN Mobile Money</option>
+              <option>Airtel Money</option>
+              <option>Autre</option>
+            </select>
+          </label>
+        </div>
+        <label class="full-label">Adresse / indications<textarea name="address"
+            placeholder="Quartier, avenue, repère..."></textarea></label>
+        <div class="checkout-total"><span>Total estimatif</span><strong id="checkoutTotal">0 F</strong></div>
+        <button class="lux-submit" type="submit">Confirmer la commande <span>→</span></button>
+        <small>Démo front-end : le paiement réel sera connecté à une API sécurisée côté serveur.</small>
+      </form>
+    </div>
+  </div>
+
+  <div class="toast" id="toast"></div>
+
+  <script src="js/script.js"></script>
+</body>
+
+</html>

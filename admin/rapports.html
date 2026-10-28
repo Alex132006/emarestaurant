@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="fr">
+  <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Rapports | E.M.A</title><link rel="stylesheet" href="admin.css"><script src="admin.js" defer></script></head>
+  <body data-admin-page="reports">
+    <header class="admin-header"><div class="admin-header-inner"><a class="admin-brand" href="dashbord.html">E.M.A Administration</a>
+      <nav class="admin-nav"><a href="dashbord.html">Vue d'ensemble</a><a href="commandes.html">Commandes</a>
+        <a href="plats.html">Plats</a><a href="stocks.html">Disponibilité</a><a aria-current="page" href="rapports.html">Rapports</a></nav>
+      <button id="logout-button" type="button">Déconnexion</button></div></header>
+    <main><h1>Rapports</h1><p id="admin-message" class="admin-message" role="status"></p>
+      <section class="admin-stats">
+        <article class="admin-card admin-stat">Total des commandes<strong id="report-orders">—</strong></article>
+        <article class="admin-card admin-stat">Chiffre d'affaires des commandes non annulées<strong id="report-revenue">—</strong></article>
+        <article class="admin-card admin-stat">En attente<strong id="report-pending">—</strong></article>
+        <article class="admin-card admin-stat">Livrées<strong id="report-delivered">—</strong></article>
+      </section>
+      <p class="muted">Les montants sont calculés sur les commandes enregistrées dans la base, et non sur les paiements effectivement encaissés.</p>
+    </main>
+  </body>
+</html>

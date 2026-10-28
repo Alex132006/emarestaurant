@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Finalisez votre commande chez E.M.A Restaurant à Brazzaville.">
+
+    <title>Finaliser ma commande | E.M.A Restaurant</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/commande.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+
+    <!-- EN-TÊTE -->
+
+    <header class="site-header">
+        <div class="container header-container">
+
+            <a href="index.html" class="logo">
+                <span class="logo-symbol">E.M.A</span>
+                <span class="logo-text">RESTAURANT</span>
+            </a>
+
+            <button type="button" class="menu-toggle" id="menu-toggle" aria-label="Ouvrir le menu" aria-expanded="false"
+                aria-controls="navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="navigation" id="navigation">
+                <a href="index.html">Accueil</a>
+                <a href="menu.html">Notre menu</a>
+                <a href="contact.html">Contact</a>
+                <a href="panier.html">Mon panier</a>
+            </nav>
+
+        </div>
+    </header>
+
+
+    <main>
+
+        <!-- BANNIÈRE -->
+
+        <section class="checkout-hero">
+            <div class="container">
+                <p class="eyebrow">PLUS QU'UNE ÉTAPE</p>
+                <h1>Finaliser ma commande</h1>
+                <p>
+                    Renseignez vos coordonnées pour que nous puissions
+                    préparer et livrer votre commande.
+                </p>
+            </div>
+        </section>
+
+
+        <!-- CONTENU PRINCIPAL -->
+
+        <section class="checkout-section">
+            <div class="container">
+
+                <div class="checkout-breadcrumb">
+                    <a href="index.html">Accueil</a>
+                    <span>/</span>
+                    <a href="panier.html">Panier</a>
+                    <span>/</span>
+                    <span>Commande</span>
+                </div>
+
+
+                <div id="checkout-empty" class="checkout-empty" hidden>
+                    <h2>Votre panier est vide</h2>
+
+                    <p>
+                        Ajoutez des plats à votre panier avant de
+                        poursuivre votre commande.
+                    </p>
+
+                    <a href="menu.html" class="btn-primary">
+                        Découvrir notre menu
+                    </a>
+                </div>
+
+
+                <div id="checkout-content" class="checkout-layout">
+
+                    <!-- FORMULAIRE CLIENT -->
+
+                    <div class="checkout-main">
+
+                        <form id="checkout-form">
+
+                            <!-- COORDONNÉES -->
+
+                            <section class="checkout-card">
+
+                                <div class="checkout-card-heading">
+                                    <span class="step-number">01</span>
+
+                                    <div>
+                                        <h2>Vos coordonnées</h2>
+                                        <p>
+                                            Ces informations nous permettront
+                                            de vous contacter.
+                                        </p>
+                                    </div>
+                                </div>
+
+
+                                <div class="form-grid">
+
+                                    <div class="form-group">
+                                        <label for="firstName">
+                                            Prénom *
+                                        </label>
+
+                                        <input type="text" id="firstName" name="firstName" placeholder="Votre prénom"
+                                            autocomplete="given-name" maxlength="80" required>
+                                    </div>
+
+
+                                    <div class="form-group">
+                                        <label for="lastName">
+                                            Nom *
+                                        </label>
+
+                                        <input type="text" id="lastName" name="lastName" placeholder="Votre nom"
+                                            autocomplete="family-name" maxlength="80" required>
+                                    </div>
+
+
+                                    <div class="form-group">
+                                        <label for="phone">
+                                            Téléphone *
+                                        </label>
+
+                                        <input type="tel" id="phone" name="phone" placeholder="Ex. : 06 000 00 00"
+                                            autocomplete="tel" inputmode="tel" maxlength="25" required>
+
+                                        <small>
+                                            Utilisez un numéro sur lequel
+                                            nous pouvons vous joindre.
+                                        </small>
+                                    </div>
+
+
+                                    <div class="form-group">
+                                        <label for="email">
+                                            Adresse e-mail (facultatif)
+                                        </label>
+
+                                        <input type="email" id="email" name="email" placeholder="vous@exemple.com"
+                                            autocomplete="email" maxlength="150">
+                                    </div>
+
+                                </div>
+
+                            </section>
+
+
+                            <!-- LIVRAISON -->
+
+                            <section class="checkout-card">
+
+                                <div class="checkout-card-heading">
+                                    <span class="step-number">02</span>
+
+                                    <div>
+                                        <h2>Adresse de livraison</h2>
+                                        <p>
+                                            Indiquez précisément où livrer
+                                            votre commande.
+                                        </p>
+                                    </div>
+                                </div>
+
+
+                                <div class="form-grid">
+
+                                    <div class="form-group">
+                                        <label for="city">
+                                            Ville *
+                                        </label>
+
+                                        <input type="text" id="city" name="city" value="Brazzaville" maxlength="100"
+                                            required>
+                                    </div>
+
+
+                                    <div class="form-group">
+                                        <label for="district">
+                                            Quartier / arrondissement *
+                                        </label>
+
+                                        <input type="text" id="district" name="district" placeholder="Ex. : Talangaï"
+                                            maxlength="120" required>
+                                    </div>
+
+
+                                    <div class="form-group form-group-full">
+                                        <label for="address">
+                                            Adresse précise *
+                                        </label>
+
+                                        <input type="text" id="address" name="address"
+                                            placeholder="Rue, avenue, parcelle, repère..." autocomplete="street-address"
+                                            maxlength="250" required>
+                                    </div>
+
+
+                                    <div class="form-group form-group-full">
+                                        <label for="deliveryInstructions">
+                                            Instructions complémentaires
+                                        </label>
+
+                                        <textarea id="deliveryInstructions" name="deliveryInstructions" rows="3"
+                                            maxlength="500"
+                                            placeholder="Précisions pour trouver votre adresse..."></textarea>
+                                    </div>
+
+                                </div>
+
+
+                                <div class="delivery-notice">
+                                    <span>ⓘ</span>
+
+                                    <p>
+                                        La disponibilité de la livraison et
+                                        les frais définitifs seront confirmés
+                                        par le restaurant.
+                                    </p>
+                                </div>
+
+                            </section>
+
+
+                            <!-- PAIEMENT -->
+
+                            <section class="checkout-card">
+
+                                <div class="checkout-card-heading">
+                                    <span class="step-number">03</span>
+
+                                    <div>
+                                        <h2>Mode de paiement</h2>
+                                        <p>
+                                            Sélectionnez votre préférence.
+                                        </p>
+                                    </div>
+                                </div>
+
+
+                                <div class="payment-options">
+
+                                    <label class="payment-option">
+                                        <input type="radio" name="paymentMethod" value="cash_on_delivery" checked>
+
+                                        <span class="payment-option-content">
+                                            <span class="payment-icon">💵</span>
+
+                                            <span>
+                                                <strong>
+                                                    Paiement à la livraison
+                                                </strong>
+
+                                                <small>
+                                                    Payer à la réception,
+                                                    sous réserve de confirmation.
+                                                </small>
+                                            </span>
+                                        </span>
+                                    </label>
+
+
+                                    <label class="payment-option">
+                                        <input type="radio" name="paymentMethod" value="mtn_momo">
+
+                                        <span class="payment-option-content">
+                                            <span class="payment-icon">📱</span>
+
+                                            <span>
+                                                <strong>MTN Mobile Money</strong>
+
+                                                <small>
+                                                    Paiement électronique :
+                                                    disponibilité à confirmer.
+                                                </small>
+                                            </span>
+                                        </span>
+                                    </label>
+
+
+                                    <label class="payment-option">
+                                        <input type="radio" name="paymentMethod" value="other_mobile_money">
+
+                                        <span class="payment-option-content">
+                                            <span class="payment-icon">📲</span>
+
+                                            <span>
+                                                <strong>Autre Mobile Money</strong>
+
+                                                <small>
+                                                    Modalités à confirmer
+                                                    avec le restaurant.
+                                                </small>
+                                            </span>
+                                        </span>
+                                    </label>
+
+                                </div>
+
+
+                                <p class="payment-warning">
+                                    Le choix d'un moyen de paiement mobile
+                                    n'effectue aucun paiement à lui seul.
+                                    Le service devra être intégré et activé
+                                    avant son utilisation réelle.
+                                </p>
+
+                            </section>
+
+
+                            <!-- NOTES -->
+
+                            <section class="checkout-card">
+
+                                <div class="checkout-card-heading">
+                                    <span class="step-number">04</span>
+
+                                    <div>
+                                        <h2>Un message pour la cuisine ?</h2>
+
+                                        <p>
+                                            Ajoutez une précision concernant
+                                            votre commande.
+                                        </p>
+                                    </div>
+                                </div>
+
+
+                                <div class="form-group">
+                                    <label for="orderNotes">
+                                        Instructions pour la commande
+                                    </label>
+
+                                    <textarea id="orderNotes" name="orderNotes" rows="3" maxlength="500"
+                                        placeholder="Ex. : préférence de préparation..."></textarea>
+                                </div>
+
+                            </section>
+
+
+                            <!-- CONSENTEMENT -->
+
+                            <div class="checkout-consent">
+
+                                <label>
+                                    <input type="checkbox" id="acceptTerms" name="acceptTerms" required>
+
+                                    <span>
+                                        J'accepte les
+                                        <a href="conditions.html" target="_blank">
+                                            conditions générales
+                                        </a>
+                                        et j'ai pris connaissance de la
+                                        <a href="confidentialite.html" target="_blank">
+                                            politique de confidentialité
+                                        </a>.
+                                    </span>
+                                </label>
+
+                            </div>
+
+
+                            <p id="checkout-message" class="checkout-message" role="status" aria-live="polite"></p>
+
+
+                            <button type="submit" id="submit-order" class="submit-order-btn">
+                                Confirmer mes informations
+                                <span aria-hidden="true">→</span>
+                            </button>
+
+
+                            <p class="required-note">
+                                * Champs obligatoires.
+                            </p>
+
+                        </form>
+
+                    </div>
+
+
+                    <!-- RÉCAPITULATIF -->
+
+                    <aside class="checkout-summary">
+
+                        <div class="summary-heading">
+                            <p class="section-label">VOTRE SÉLECTION</p>
+                            <h2>Résumé de la commande</h2>
+                        </div>
+
+
+                        <div id="checkout-order-items" class="checkout-order-items">
+                            <!-- Les articles sont ajoutés par JavaScript. -->
+                        </div>
+
+
+                        <div class="checkout-summary-line">
+                            <span>Sous-total</span>
+                            <strong id="checkout-subtotal">0 FCFA</strong>
+                        </div>
+
+
+                        <div class="checkout-summary-line">
+                            <span>Livraison estimée</span>
+                            <strong id="checkout-delivery">0 FCFA</strong>
+                        </div>
+
+
+                        <div class="checkout-total">
+                            <span>Total estimé</span>
+                            <strong id="checkout-total">0 FCFA</strong>
+                        </div>
+
+
+                        <p class="summary-disclaimer">
+                            Le montant définitif sera confirmé selon
+                            la disponibilité des plats et votre adresse.
+                        </p>
+
+
+                        <a href="panier.html" class="edit-cart-link">
+                            ← Modifier mon panier
+                        </a>
+
+                    </aside>
+
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+
+    <!-- PIED DE PAGE -->
+
+    <footer class="site-footer">
+        <div class="container footer-container">
+
+            <div class="footer-brand">
+                <a href="index.html" class="logo footer-logo">
+                    <span class="logo-symbol">E.M.A</span>
+                    <span class="logo-text">RESTAURANT</span>
+                </a>
+
+                <p>
+                    La passion de la cuisine, le plaisir de partager.
+                </p>
+            </div>
+
+            <div class="footer-links">
+                <a href="menu.html">Notre menu</a>
+                <a href="contact.html">Contact</a>
+                <a href="conditions.html">Conditions générales</a>
+                <a href="confidentialite.html">Confidentialité</a>
+            </div>
+
+            <div class="footer-bottom">
+                <p>
+                    © <span id="current-year"></span>
+                    E.M.A Restaurant. Tous droits réservés.
+                </p>
+            </div>
+
+        </div>
+    </footer>
+
+
+    <script src="js/main.js"></script>
+    <script src="js/commande.js"></script>
+
+</body>
+
+</html>

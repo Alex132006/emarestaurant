@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="fr">
+  <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Plats | E.M.A</title><link rel="stylesheet" href="admin.css"><script src="admin.js" defer></script></head>
+  <body data-admin-page="products">
+    <header class="admin-header"><div class="admin-header-inner"><a class="admin-brand" href="dashbord.html">E.M.A Administration</a>
+      <nav class="admin-nav"><a href="dashbord.html">Vue d'ensemble</a><a href="commandes.html">Commandes</a>
+        <a aria-current="page" href="plats.html">Plats</a><a href="stocks.html">Disponibilité</a><a href="rapports.html">Rapports</a></nav>
+      <button id="logout-button" type="button">Déconnexion</button></div></header>
+    <main><h1>Menu et plats</h1><p id="admin-message" class="admin-message" role="status"></p>
+      <section class="admin-card"><h2>Ajouter ou modifier un plat</h2>
+        <form id="product-form" class="admin-form">
+          <label>Nom<input name="name" maxlength="150" required></label>
+          <label>Catégorie<select name="categoryId" required><option value="">Choisir…</option></select></label>
+          <label>Prix en FCFA<input name="price" type="number" min="0" step="1" required></label>
+          <label>Image (URL ou chemin)<input name="image" maxlength="500"></label>
+          <label class="wide">Description<textarea name="description" maxlength="2000" rows="3"></textarea></label>
+          <label><span>Visible dans le menu</span><input name="isAvailable" type="checkbox" checked></label>
+          <button id="product-submit" type="submit">Ajouter le plat</button>
+          <button type="reset">Vider le formulaire</button>
+        </form>
+      </section>
+      <section class="admin-card admin-table-wrap"><h2>Produits enregistrés</h2><table>
+        <thead><tr><th>Nom</th><th>Catégorie</th><th>Prix</th><th>Disponibilité</th><th>Action</th></tr></thead>
+        <tbody id="products-table"></tbody></table></section>
+    </main>
+  </body>
+</html>

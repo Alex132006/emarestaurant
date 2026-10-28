@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Suivre ma commande | E.M.A Restaurant</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <script src="js/suivi-commande.js" defer></script>
+  </head>
+  <body>
+    <main class="section-container section-padding">
+      <h1>Suivre ma commande</h1>
+      <p>Indiquez la référence de commande et le numéro de téléphone utilisé lors de la commande.</p>
+      <form id="tracking-form">
+        <p><label for="reference">Référence</label><br>
+          <input id="reference" name="reference" required maxlength="40" autocomplete="off"></p>
+        <p><label for="phone">Téléphone de la commande</label><br>
+          <input id="phone" name="phone" type="tel" required maxlength="25" autocomplete="tel"></p>
+        <button class="button button-primary" type="submit">Rechercher</button>
+      </form>
+      <p id="tracking-message" role="status" aria-live="polite"></p>
+      <section id="tracking-result" hidden>
+        <h2 id="tracking-status"></h2>
+        <p id="tracking-total"></p>
+        <ul id="tracking-items"></ul>
+      </section>
+      <p><a href="index.html">Accueil</a></p>
+    </main>
+  </body>
+</html>

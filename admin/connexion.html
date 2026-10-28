@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Connexion | Administration E.M.A</title>
+    <link rel="stylesheet" href="admin.css">
+    <script src="admin.js" defer></script>
+  </head>
+  <body data-admin-page="login">
+    <main class="login-card admin-card">
+      <h1>Administration E.M.A</h1>
+      <p class="muted">Connectez-vous pour gérer les commandes et le menu.</p>
+      <form id="login-form">
+        <label>Mot de passe administrateur
+          <input type="password" name="password" required autocomplete="current-password">
+        </label>
+        <button type="submit">Se connecter</button>
+      </form>
+      <p id="admin-message" class="admin-message" role="status" aria-live="polite"></p>
+    </main>
+  </body>
+</html>
